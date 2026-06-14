@@ -33,7 +33,7 @@ If you don't want the game to run as an independant Application Bundle and want 
 
 - after following the instructions above, right-click Half Life 2.app and select "display contents"
 - navigate to Contents/Resources/, select all the files inside and copy them
-- in Steam, select your installed version of Half Life 2 in the library, click the gear icon and select Manage > browse local files, it'll open a Finder window where the Portal files are installed
+- in Steam, select your installed version of Half Life 2 in the library, click the gear icon and select Manage > browse local files, it'll open a Finder window where the Half Life 2 files are installed
 - delete everything except hl2.sh
 - paste the files you copied
 
