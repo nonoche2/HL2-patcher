@@ -31,7 +31,7 @@ the script will then download the older version of Half Life 2, download the Sou
 
 If you don't want the game to run as an independant Application Bundle and want to have it work from Steam:
 
-- after following the instructions above, right-click Portal.app and select "display contents"
+- after following the instructions above, right-click Half Life 2.app and select "display contents"
 - navigate to Contents/Resources/, select all the files inside and copy them
 - in Steam, select your installed version of Half Life 2 in the library, click the gear icon and select Manage > browse local files, it'll open a Finder window where the Portal files are installed
 - delete everything except hl2.sh
