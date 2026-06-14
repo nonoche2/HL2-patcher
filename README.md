@@ -38,3 +38,5 @@ If you don't want the game to run as an independant Application Bundle and want 
 - paste the files you copied
 
 you can now launch Half Life 2 from Steam
+
+A similar script is available for [Portal](https://github.com/nonoche2/Portal-patcher/tree/main)
