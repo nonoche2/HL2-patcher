@@ -1,7 +1,7 @@
 # HL2-patcher
-a script to compile Half Life 2 for Apple Silicon
+a script to compile Half Life 2 for Apple Silicon and Intel 64 bit
 
-This script will create an Apple Silicon version of Half Life 2 for macOS.
+This script will create an Apple Silicon or Intel 64 bit version of Half Life 2 for macOS.
 
 It is adapted from [this guide](https://jxhug.notion.site/Guide-to-Installing-Half-Life-2-Using-Source-Engine-on-macOS-9fa5ffc910f5454ab0f0e5da2a9e5b9f) from 2023 which had these issues:
 - compiler commands were outdated with the latest updates to Clang
@@ -12,7 +12,7 @@ This script aims to fix all these issues and create an application bundle with m
 
 ## How to use:
 
-- to the right of this window, click "releases", expand "assets" if necessary and click on "hl2.command.zip" to download it
+- to the right of this window, click "releases", expand "assets" if necessary and click on "hl2.Patcher.zip" to download it
 - unzip the file if necessary
 - Double click hl2.command. You will have a Gatekeeper alert preventing the script from running, go to system settings > security and privacy, scroll down and click "open anyway".
 
