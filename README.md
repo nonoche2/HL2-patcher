@@ -3,6 +3,8 @@ a script to compile Half Life 2 for Apple Silicon and Intel 64 bit
 
 This script will create an Apple Silicon or Intel 64 bit version of Half Life 2 for macOS.
 
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/nonoche)
+
 It is adapted from [this guide](https://jxhug.notion.site/Guide-to-Installing-Half-Life-2-Using-Source-Engine-on-macOS-9fa5ffc910f5454ab0f0e5da2a9e5b9f) from 2023 which had these issues:
 - compiler commands were outdated with the latest updates to Clang
 - Valve updated the Source Engine and files with Half Life 2's anniversary edition which have rendering issues with the older version of the Source Engine used for this port
