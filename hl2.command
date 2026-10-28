@@ -143,6 +143,24 @@ else
     git submodule update --init --recursive
 fi
 
+# 4b. Enable Steam achievements (client/server were built with DISABLE_STEAM=1,
+#     which compiles out SetAchievement/SetStat, so achievements stayed local-only)
+echo "Enabling Steam achievement support..."
+sed -i '' "s/conf.env.append_unique('DEFINES', \['DISABLE_STEAM=1'\])/pass/" "$REPO_DIR/game/client/wscript" "$REPO_DIR/game/server/wscript"
+if grep -q "DISABLE_STEAM=1" "$REPO_DIR/game/client/wscript" "$REPO_DIR/game/server/wscript"; then
+    echo "ERROR: could not remove DISABLE_STEAM=1 from wscript files."
+    exit 1
+fi
+
+# 4c. Let the -language launch option win over Steam's game language
+#     (Steam offers no Hungarian for HL2, so otherwise the menu falls back to English)
+echo "Making -language launch option take priority..."
+perl -0pi -e 's/(Msg\("CL_InitLanguageCvar\\n"\);\n)/$1\tif ( CommandLine()->CheckParm( "-language" ) )\n\t{\n\t\tcl_language.SetValue( CommandLine()->ParmValue( "-language", "english" ) );\n\t\treturn;\n\t}\n/' "$REPO_DIR/engine/cl_main.cpp"
+if ! grep -qF 'ParmValue( "-language", "english" ) )' "$REPO_DIR/engine/cl_main.cpp"; then
+    echo "ERROR: could not patch language selection in engine/cl_main.cpp."
+    exit 1
+fi
+
 # 5. Configure Build with Architecture Environment
 cd "$REPO_DIR"
 echo "Setting up build environment for $MAC_ARCH_NAME ($TARGET_ARCH)..."
